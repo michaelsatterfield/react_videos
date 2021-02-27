@@ -1,5 +1,4 @@
 import React from 'react';
-import userEvent from "@testing-library/user-event";
 
 class SearchBar extends React.Component {
     state = { userInput: ''}
