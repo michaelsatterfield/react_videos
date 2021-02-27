@@ -2,11 +2,9 @@ import React from 'react';
 import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
 
-<<<<<<< HEAD
-class App extends React.Component {
-    onTermSubmit = (term) => {
-    }
-=======
+
+
+
 
 class App extends React.Component {
     state = {videos: [] };
@@ -23,7 +21,7 @@ class App extends React.Component {
         this.setState({videos: response.data.items});
     };
 
->>>>>>> 9f8e53825c066bf08893ae8b1fd3d1c80381cc6e
+
     render() {
         return (
             <div className={'ui container'}>
