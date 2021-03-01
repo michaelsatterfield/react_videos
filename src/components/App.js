@@ -1,24 +1,24 @@
 import React from 'react';
 import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
-
-
-
+import KEY from "../Keys";
+import VideoList from "./VideoList";
 
 
 class App extends React.Component {
-    state = {videos: [] };
+    state = { videos: [] };
 
-
-    onTermSubmit = async term => {
-        console.log(term)
+    onTermSubmit = async (term) => {
         const response = await youtube.get('/search', {
             params: {
-                q: term
-            }
+                q: term,
+                part: 'snippet',
+                maxResults: 5,
+                type: 'video',
+                key: KEY,
+            },
         });
-
-        this.setState({videos: response.data.items});
+        this.setState({ videos: response.data.items });
     };
 
 
@@ -26,7 +26,7 @@ class App extends React.Component {
         return (
             <div className={'ui container'}>
                 <SearchBar callParentSubmit={this.onTermSubmit}/>
-                I have {this.state.videos.length} videos
+                <VideoList videos={this.state.videos}/>
             </div>
         )
 
