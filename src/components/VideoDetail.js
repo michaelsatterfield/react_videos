@@ -1,4 +1,5 @@
 import React from 'react';
+import './mySass.scss'
 import SearchBar from "./SearchBar";
 
 const VideoDetail = ({video}) => {
@@ -7,7 +8,7 @@ const VideoDetail = ({video}) => {
 
         return<div className={"ui segment"} style={{minHeight: 200}} >
             <div className=" ui active inverted dimmer">
-                <div className="ui text loader">video player</div>
+                <div className="ui text loader" >loading player</div>
             </div>
         </div>
     }

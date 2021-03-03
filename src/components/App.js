@@ -5,8 +5,13 @@ import KEY from "../Keys";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
+
 class App extends React.Component {
     state = {videos: [], selectedVideo: null};
+
+        componentDidMount() {
+            this.onTermSubmit('codeup')
+        }
 
     onTermSubmit = async (term) => {
         const response = await youtube.get('/search', {
