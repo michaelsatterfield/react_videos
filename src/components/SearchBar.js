@@ -10,12 +10,14 @@ class SearchBar extends React.Component {
     onFormSubmit = event => {
         // keeps page from reloading when enter is pressed by user
         event.preventDefault();
+
         // TODO: Make sure we call callback from parent component
         this.props.callParentSubmit(this.state.userInput)
     }
 
 
     render() {
+
         return (
             <div className={'search-bar ui segment'}>
              <form onSubmit={this.onFormSubmit} className={'ui form'}>

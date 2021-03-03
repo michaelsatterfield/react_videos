@@ -1,6 +1,5 @@
 import axios from "axios";
-
-
+// eslint-disable-next-line no-unused-vars
 import KEY from "../Keys";
 
 
@@ -15,7 +14,6 @@ export default axios.create({
     params: {
         part: 'snippet',
         type: 'video',
-
         maxResults: '10',
         key: 'KEY'
 
