@@ -26,13 +26,7 @@ class App extends React.Component {
         }
 
     render() {
-        // if(this.state.userInput){
-        //     return<div className={"ui segment"} style={{minHeight: 200}} >
-        //         <div className=" ui active inverted dimmer">
-        //             <div className="ui text loader">Loading...</div>
-        //         </div>
-        //     </div>
-        // }
+
         return (
             <div className={'ui container'}>
                 <SearchBar callParentSubmit={this.onTermSubmit}/>

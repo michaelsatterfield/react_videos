@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoDetail from "./VideoDetail";
 
 class SearchBar extends React.Component {
     state = { userInput: ''}
